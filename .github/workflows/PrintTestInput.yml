@@ -17,3 +17,9 @@ jobs:
         run: "echo 'The test input is: ${{ github.event.inputs.test_input }}'"
       - name: Test aws
         run: "aws --version"
+      - name: Install AWS SAM CLI
+        run: |
+          pip install aws-sam-cli
+      - name: Test AWS SAM CLI Version
+        run: sam --version
+        

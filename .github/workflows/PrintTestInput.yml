@@ -1,0 +1,17 @@
+name: Print Test Input
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_input:
+        description: 'Enter a test value'
+        required: true
+        default: 'Hello, World!'
+
+jobs:
+  print_input:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Test Input
+        run: echo "The test input is: ${{ github.event.inputs.test_input }}"

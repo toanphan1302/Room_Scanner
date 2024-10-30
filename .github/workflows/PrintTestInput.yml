@@ -14,4 +14,4 @@ jobs:
 
     steps:
       - name: Print Test Input
-        run: echo "The test input is: ${{ github.event.inputs.test_input }}"
+        run: "echo 'The test input is: ${{ github.event.inputs.test_input }}'"
